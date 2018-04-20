@@ -13,4 +13,7 @@ RUN update-alternatives --install "/usr/bin/java" "java" "/opt/jre/bin/java" 1 &
     update-alternatives --install "/usr/bin/javaws" "javaws" "/opt/jre/bin/javaws" 1 &&\
     echo export JAVA_HOME=/opt/jre/ >> ~/.bashrc
 
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
+
 CMD ["java", "-version"]
